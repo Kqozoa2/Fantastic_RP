@@ -1,0 +1,410 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* ======================================================================================== */
+
+/* ======================================================================================== */
+
+
+body {
+    background-color: rgb(182, 103, 255);
+}
+
+#tel {
+    display: none;
+}
+
+#header {
+    background-color: rgb(56, 0, 109);
+    height: 4rem;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.btn {
+    font-size: 1.5rem;
+    color: rgba(216, 216, 216, 0.795);
+    text-decoration: none;
+    font-family: 'Rubik', sans-serif;
+    margin-top: 15px;
+    position: absolute;
+    cursor: pointer; 
+    transition: all .2s;   
+}
+.btn::after {
+    content: '';
+    /* position: absolute; */
+    transition: all .5s;
+   
+}
+.btn:hover {
+    color:rgb(255, 255, 255);   
+}
+
+#btn5 {
+    margin-top: 7px;
+    padding: 15px 30px;
+    right: 5%;
+    top: 3px;
+
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+
+    cursor: pointer;
+    background-image: linear-gradient(225deg, #412df5 0%, #476dd6 50%, #0003b8 100%);    
+    overflow: hidden; /* <--- : Oblige le fond dégradé de se mettre sur le bouton */    
+    border-radius: 30px;
+    box-shadow: 0px -0px 0px 0px rgba(143, 64, 248, .5), 0px 0px 0px 0px rgba(39, 200, 255, .5);
+
+    position: absolute;
+    transition: all .2s;
+}
+
+#btn5::after {
+    content: '';
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: -50px;
+    left: -100%;
+    background-image: linear-gradient(225deg,  #77aeff 0%, #4d7cff 50%, #3438ff 100%);
+    z-index: -1;
+    transition: all .5s;
+   
+}
+
+#btn5:hover::after {
+    transform: rotate(150deg);
+  }
+
+#btn5:hover {
+    transform: translate(0,-6px);
+    box-shadow: 10px -10px 25px 0px rgba(143, 64, 248, .25), -10px 10px 25px 0px rgba(39, 200, 255, .25);
+}
+/* ----------------------------------------Alignement des bouton------------------------------------------- */
+#btn1 {
+    right: 17%;
+}
+
+#btn2 {
+    right: 24%;
+}
+#btn3 {
+    right: 37%;
+}
+
+#btn4 {
+    left: 45%;
+}
+
+/* ---------------------------------------------------------------------------------------------------------- */
+#div {
+    width: 100%;    
+    height: 13rem;
+}
+#size-circle {
+    margin: 5%;
+    left: 37%;
+    top: 4.5rem;
+    width: 15rem;
+    height: 15rem;
+    position: absolute;
+}
+
+#img {
+    border-radius: 50%;
+    border: 7px solid rgb(106, 1, 128);
+    left: 50px;
+    width: 100%;
+}
+
+#bvn {
+    color: #8b00cc;
+    font-family: 'Alfa Slab One', cursive;
+    font-family: 'Courgette', cursive;
+    font-family: 'Noto Serif', serif;
+    cursor: pointer;
+
+}
+
+#h1 {
+    /* margin: -1% 33%;
+    margin-left: 50%; */
+    height: 7rem;
+    width: 27rem;
+    left: 40.5%;    
+    top: 26.5rem;
+    position: absolute;
+    /* top: 90%; */
+    /* position: absolute; */
+}
+
+
+
+
+#btn0 {
+    left: 10%;
+}
+
+
+.menu-btn{
+  text-decoration: none;
+  left: 0px;
+  margin: 10px 60px;
+  height: 45px;
+  width: 45px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: white;
+  background: #7D5BA6;
+  position: absolute;
+}
+
+#sidenavbar{
+  box-sizing: border-box;
+  font-family: 'Delius', cursive;
+  font-family: 'Jura', sans-serif;
+  width: 80%;
+  max-width: 310px;
+  height: 100%;
+  position: fixed;
+  left: 0px;
+  top: 0;
+  background: #5c5ec7;
+  left: -310px;
+  transition: left 0.4s;
+}
+#sidenavbar:target{
+  left: 0px;
+}
+
+#ul{
+  list-style: none;
+  margin-top: 150px;
+}
+
+li{
+  transition: background 0.4s;
+}
+li a{
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  padding: 20px;
+  padding-left: 30px;
+  width: 100%;
+}
+
+li.active a{
+  color: white;
+}
+
+li.active, li:hover{
+  background: #6f75cf;
+}
+
+li.active, li:hover a{
+  color: white;
+}
+
+.close{
+  position: absolute;
+  top: 10px;
+  right: 0px;
+}
+
+.close-btn{
+  cursor: pointer;
+  z-index: 1;
+}
+
+.close:hover{
+  background: transparent;
+}
+
+#sidenavbar:target+.close-btn{
+  left: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+/* ========================================================================================================== */
+@media only screen and (max-width: 1248px) {
+    .btn {
+        font-size: 1.4rem;
+    } 
+    #h1 {
+        font-size: 0.9rem;
+        left: 41%;
+        top: 25rem;
+    }
+    #btn0 {
+        left: 12%;
+        margin-top: 14px;
+    }
+    .menu-btn {
+        margin-left: 5%;
+        height: 37px;
+        width: 37px;
+        font-size: 1.5rem;
+    }
+    #sidenavbar{
+        box-sizing: border-box;
+        font-family: 'Delius', cursive;
+        font-family: 'Jura', sans-serif;
+        width: 80%;
+        max-width: 250px;
+        height: 100%;
+        position: fixed;
+        left: 0px;
+        top: 0;
+        background: #5c5ec7;
+        left: -310px;
+        transition: left 0.4s;
+      }
+}
+/* ---------------------------------------------------------------------------------------- */ 
+@media only screen and (max-width: 1175px) {
+    #img {
+        left: 37%;
+    }
+
+    #h1 {
+        font-size: 0.9rem;
+        left: 41%;
+    }
+
+    .btn {
+        font-size: large;
+        margin-top: 19px;
+    }
+
+    #btn0 {
+        left: 12%;
+        margin-top: 14px;
+    }
+    .menu-btn {
+        margin-left: 5%;
+        height: 37px;
+        width: 37px;
+        font-size: 1.5rem;
+    }
+}
+/* ---------------------------------------------------------------------------------------- */ 
+@media only screen and (max-width: 1034px) {
+    #img {
+        width: 80%;
+        border: 5px solid rgb(106, 1, 128);
+    }
+
+    #h1 {
+        font-size: 0.9rem;
+        left: 39%;
+        top: 22rem;
+    }
+
+}
+/* ---------------------------------------------------------------------------------------- */ 
+@media only screen and (max-width: 1020px) {
+    #h1 {
+        font-size: 0.9rem;
+        left: 39%;
+        top: 22rem;
+    }
+
+    .btn {
+        font-size:medium;
+        margin-top: 20px;
+    }
+    #btn5 {
+        font-size: 0.9rem;
+        top: 3px;
+        padding: 12px 25px;
+    }
+    #btn1 {
+        right: 19%;
+    }
+    #btn2 {
+        right: 25%;
+    }
+    #btn3 {
+        right: 37%;
+    }
+    #btn4 {
+        right: 49%;
+    }
+    #btn0 {
+        left: 12%;
+        margin-top: 14px;
+    }
+    .menu-btn {
+        margin-left: 5%;
+        height: 37px;
+        width: 37px;
+        font-size: 1.5rem;
+    }
+    /* .menu-btn {
+        margin-left: 5%;
+        position: absolute;
+        height: 37px;
+        width: 37px;
+        font-size: 1.5rem;
+    }    #btn0 {
+        left: 13%;
+        margin-top: 13px;
+    } */
+  }
+/* ---------------------------------------------------------------------------------------- */
+@media only screen and (max-width: 858px) {
+    #header {
+        height: 3.5rem;
+    }
+
+    #h1 {
+        font-size: 0.9rem;
+        left: 37%;
+        top: 20rem;
+    }
+
+    .btn {
+        font-size: 0.85rem;
+        margin-top: 19px;
+    }
+    #btn5 {
+    font-size: 0.8rem;
+    top: 3px;
+    right: 3%;
+    padding: 10px 20px;
+    }
+    #btn4 {
+        left: 45%;
+    }
+    #btn3 {
+        left: 53%
+    }   
+
+    #btn0 {
+        left: 15%;
+        margin-top: 13px;
+    }
+}
+/* ---------------------------------------------------------------------------------------- */ 
+
+/* ---------------------------------------------------------------------------------------- */
+
+
+
